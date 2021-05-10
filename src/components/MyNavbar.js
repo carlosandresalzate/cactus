@@ -10,17 +10,16 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const usesStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,    
+        flexGrow: 1,
     },
     menuButton: {
         marginRight: theme.spacing(2),
-        // color: '#2a324E',
     },
     title: {
         flexGrow: 1,
-        // color: '#2a324E',
     },
     color: {
+        boxShadow: 'none',
         backgroundColor: '#f2ebe3',
         color: '#2a324E',
     },
@@ -30,7 +29,7 @@ function MyNavbar() {
     const classes = usesStyles();
     return (
         <div className={classes.root}>
-            <AppBar position="static" className={classes.color}>
+            <AppBar position="fixed" className={classes.color}>
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
