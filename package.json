@@ -14,8 +14,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev-chrom": "BROWSER=chrome react-scripts start",
-    "dev-fire": "BROWSER=firefox react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
