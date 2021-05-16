@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import CartWidget from './CartWidget';
 
 
 const usesStyles = makeStyles((theme) => ({
@@ -26,6 +27,7 @@ const usesStyles = makeStyles((theme) => ({
 }));
 
 function MyNavbar() {
+    const ListItem = (props) => <Button color="inherit">{ props.item }</Button>;
     const classes = usesStyles();
     return (
         <div className={classes.root}>
@@ -37,9 +39,13 @@ function MyNavbar() {
                     <Typography variant="h6" className={classes.title}>
                         Cactus
                     </Typography>
-                    <Button color="inherit">Inicio</Button>
+                    <ListItem item="Inicio" />
+                    <ListItem item="Tienda" />
+                    <ListItem item="Contacto" />
+                    <CartWidget />
+                    {/* <Button color="inherit">Incio</Button>
                     <Button color="inherit">Tienda</Button>
-                    <Button color="inherit">Contacto</Button>
+                    <Button color="inherit">Contacto</Button> */}
                 </Toolbar>
             </AppBar>
         </div>
