@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { Fragment } from 'react';
 import MyNavbar from './components/MyNavbar';
-
-const usesStyles = makeStyles((theme) => ({
-  hedings: {
-    color: '#2a324E',
-  },
-}));
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
-  const classes = usesStyles();
   return (
     <Fragment>
-      <MyNavbar />
+      <CssBaseline />
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2 className={classes.hedings}>Encuentra el Cactus o la Suculenta para ti!</h2>
-        </header>
+        <MyNavbar />
+        <ItemListContainer greeting="Hola Tutor Gaston!" />     
       </div>
     </Fragment>
   );
