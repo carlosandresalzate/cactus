@@ -1,5 +1,6 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Item from './Item';
 
 const items = [
@@ -38,9 +39,22 @@ const items = [
 ];
 
 function ItemList() {
+  const [item, setItem] = useState(null);
+  useEffect(() => {
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(items);
+      }, 2000);
+    })
+      .then((response) => response)
+      .then((data) => {
+        setItem(data);
+      })
+      .catch((err) => console.log('algo no esta bien en: ' + setItem(err)));
+  }, []);
   return (
     <Grid container spacing={2}>
-      {items?.map((item) => (
+      {item?.map((item) => (
         <Grid item xs={12} sm={4} key={item.id}>
           <Item
             title={item.title}
