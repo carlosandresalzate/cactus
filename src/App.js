@@ -31,7 +31,7 @@ function App() {
       <CssBaseline />
       <div className='App'>
         <MyNavbar />
-        <ItemListContainer greeting='Cactus' />
+        <ItemListContainer />
       </div>
     </ThemeProvider>
   );
