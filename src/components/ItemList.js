@@ -38,14 +38,16 @@ const items = [
   },
 ];
 
+const itemListproduct = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(items);
+  }, 2000);
+});
+
 function ItemList() {
   const [item, setItem] = useState(null);
   useEffect(() => {
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(items);
-      }, 2000);
-    })
+    itemListproduct
       .then((response) => response)
       .then((data) => {
         setItem(data);
