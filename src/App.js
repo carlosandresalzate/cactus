@@ -1,27 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-import { makeStyles } from '@material-ui/core/styles';
-import { Fragment } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import MyNavbar from './components/MyNavbar';
+import ItemListContainer from './components/ItemListContainer';
 
-const usesStyles = makeStyles((theme) => ({
-  hedings: {
-    color: '#2a324E',
+const mytheme = createMuiTheme({
+  palette: {
+    common: {
+      black: '#2A324E',
+      white: '#f2ebe3',
+    },
+    primary: {
+      main: '#f2ebe3',
+    },
+    secondary: {
+      main: '#CA6C73',
+    },
+    text: {
+      primary: '#2A324E',
+      secondary: '#f2ebe3',
+    },
+    background: {
+      default: '#f2ebe3',
+    },
   },
-}));
+});
 
 function App() {
-  const classes = usesStyles();
   return (
-    <Fragment>
-      <MyNavbar />
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2 className={classes.hedings}>Encuentra el Cactus o la Suculenta para ti!</h2>
-        </header>
+    <ThemeProvider theme={mytheme}>
+      <CssBaseline />
+      <div className='App'>
+        <MyNavbar />
+        <ItemListContainer />
       </div>
-    </Fragment>
+    </ThemeProvider>
   );
 }
 
