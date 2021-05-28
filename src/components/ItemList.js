@@ -1,6 +1,6 @@
-import { Grid } from '@material-ui/core';
+import {Grid} from '@material-ui/core';
 import React from 'react';
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import Item from './Item';
 
 const items = [
@@ -38,9 +38,11 @@ const items = [
   },
 ];
 
-const itemListproduct = new Promise((resolve, reject) => {
+const itemListproduct = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(items);
+    if (true) {
+      resolve(items);
+    }
   }, 2000);
 });
 
@@ -52,7 +54,8 @@ function ItemList() {
       .then((data) => {
         setItem(data);
       })
-      .catch((err) => console.log('algo no esta bien en: ' + setItem(err)));
+      .catch((err) => console.log('algo no esta bien en: ' + setItem(err)))
+      .finally(() => console.log('promesa cumplida'));
   }, []);
   return (
     <Grid container spacing={2}>
@@ -70,4 +73,5 @@ function ItemList() {
   );
 }
 
+export {items};
 export default ItemList;

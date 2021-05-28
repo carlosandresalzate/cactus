@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container } from '@material-ui/core/';
+import {Container} from '@material-ui/core/';
 import ItemList from './ItemList';
+import ItemDetailContainer from './ItemDetailContainer';
 
-const ItemListContainer = (props) => {
-  console.log(props);
+const ItemListContainer = () => {
   return (
     <Container>
-      <ItemList />
+      <ItemDetailContainer />
+      {/* <ItemList /> */}
     </Container>
   );
 };
