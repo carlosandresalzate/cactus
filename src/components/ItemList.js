@@ -65,7 +65,7 @@ function ItemList() {
             title={item.title}
             pictureUrl={item.pictureUrl}
             description={item.description}
-            price={item.price}
+            price={'$' + item.price}
           />
         </Grid>
       ))}
