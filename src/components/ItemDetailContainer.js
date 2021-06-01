@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import {Grid} from '@material-ui/core';
-import {items} from './ItemList';
+import React, { useEffect, useState } from 'react';
+import { Grid } from '@material-ui/core';
+import { items } from './ItemList';
 import ItemDetail from './ItemDetail';
 
 const singleItem = items.filter((item) => item.id === 1);

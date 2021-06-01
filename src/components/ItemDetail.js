@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import ItemCount from './ItemCount';
 
-function ItemDetail({title, description, price, pictureUrl}) {
+function ItemDetail({ title, description, price, pictureUrl }) {
   return (
     <Card>
       <CardHeader title={title} />

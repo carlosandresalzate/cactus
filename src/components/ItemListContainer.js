@@ -1,7 +1,6 @@
 import React from 'react';
-import {Container, Box} from '@material-ui/core/';
+import { Container, Box } from '@material-ui/core/';
 import ItemList from './ItemList';
-import ItemDetailContainer from './ItemDetailContainer';
 
 const ItemListContainer = () => {
   return (

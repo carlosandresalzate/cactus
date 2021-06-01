@@ -1,6 +1,6 @@
-import {Grid} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import React from 'react';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Item from './Item';
 
 const items = [
@@ -73,5 +73,5 @@ function ItemList() {
   );
 }
 
-export {items};
+export { items };
 export default ItemList;
