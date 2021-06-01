@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CartWidget from './CartWidget';
+import { Button } from '@material-ui/core';
 
 const usesStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +27,9 @@ function MyNavbar() {
           <Typography variant='h6' className={classes.title}>
             Cactus
           </Typography>
-          <CartWidget />
+          <Button>
+            <CartWidget />
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
