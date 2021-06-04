@@ -1,7 +1,11 @@
+/* React */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+/* Material */
 import { Button, Fab, Grid } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+/* Components */
 
 function ItemCount({ initial, stock, addOn }) {
   const [count, setCount] = useState(initial);
@@ -35,6 +39,8 @@ function ItemCount({ initial, stock, addOn }) {
       </Fab>
       <Grid item xs={12}>
         <Button
+          component={Link}
+          to='/item/:id'
           variant='outlined'
           color='secondary'
           fullWidth={true}
