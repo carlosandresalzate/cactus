@@ -6,9 +6,9 @@ import { Grid } from '@material-ui/core';
 /* Conmponents */
 import Item from './Item';
 import cactus_1 from '../img/matudae_1.png';
-import cactus_2 from '../img/matudae_2.png';
+import cactus_2 from '../img/matudae_2.jpg';
 import suculenta_1 from '../img/suculenta.jpg';
-import maceta_1 from '../img/maceta_1.jgp';
+import maceta_1 from '../img/maceta_1.jpg';
 
 const items = [
   {
@@ -75,6 +75,7 @@ function ItemList() {
         <Grid item xs={12} sm={4} key={item.id}>
           <Item
             title={item.title}
+            category={item.category}
             pictureUrl={item.pictureUrl}
             description={item.description}
             price={'$' + item.price}

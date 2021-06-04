@@ -1,15 +1,15 @@
 /* React */
 import React from 'react';
 /* Material */
-import { Container, Box } from '@material-ui/core/';
-import { borders } from '@material-ui/system';
+import { AppBar, Box, Container, Tabs, Tab } from '@material-ui/core/';
+import { TabContext, TabPanel } from '@material-ui/lab';
 /* Components */
 import ItemList from './ItemList';
 
-const ItemListContainer = ({ item }) => {
+const ItemListContainer = ({ category }) => {
   return (
     <Container>
-      <Box pt={2} borderRadius='50%'>
+      <Box pt={2}>
         <ItemList />
       </Box>
     </Container>
