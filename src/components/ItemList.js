@@ -5,7 +5,10 @@ import { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 /* Conmponents */
 import Item from './Item';
-import image from '../img/matudae.png';
+import cactus_1 from '../img/matudae_1.png';
+import cactus_2 from '../img/matudae_2.png';
+import suculenta_1 from '../img/suculenta.jpg';
+import maceta_1 from '../img/maceta_1.jgp';
 
 const items = [
   {
@@ -14,7 +17,8 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 200,
-    pictureUrl: image,
+    category: 'suculentas',
+    pictureUrl: suculenta_1,
   },
   {
     id: 2,
@@ -22,7 +26,8 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 450,
-    pictureUrl: image,
+    category: 'cactus',
+    pictureUrl: cactus_1,
   },
   {
     id: 3,
@@ -30,7 +35,8 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 300,
-    pictureUrl: image,
+    category: 'macetas',
+    pictureUrl: maceta_1,
   },
   {
     id: 4,
@@ -38,7 +44,8 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 300,
-    pictureUrl: image,
+    category: 'cactus',
+    pictureUrl: cactus_2,
   },
 ];
 
