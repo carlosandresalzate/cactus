@@ -1,7 +1,12 @@
+/* React */
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+/* Material */
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+/* Components */
 import MyNavbar from './components/MyNavbar';
-import ItemListContainer from './components/ItemListContainer';
+import Home from './components/Home';
 
 const mytheme = createMuiTheme({
   palette: {
@@ -30,8 +35,10 @@ function App() {
     <ThemeProvider theme={mytheme}>
       <CssBaseline />
       <div className='App'>
-        <MyNavbar />
-        <ItemListContainer />
+        <Router>
+          <MyNavbar />
+          <Home />
+        </Router>
       </div>
     </ThemeProvider>
   );
