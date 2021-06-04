@@ -1,7 +1,11 @@
-import { Grid } from '@material-ui/core';
+/* React */
 import React from 'react';
 import { useState, useEffect } from 'react';
+/* Material */
+import { Grid } from '@material-ui/core';
+/* Conmponents */
 import Item from './Item';
+import image from '../img/matudae.png';
 
 const items = [
   {
@@ -10,7 +14,7 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 200,
-    pictureUrl: './img/matudae.png',
+    pictureUrl: image,
   },
   {
     id: 2,
@@ -18,7 +22,7 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 450,
-    pictureUrl: './img/matudae.png',
+    pictureUrl: image,
   },
   {
     id: 3,
@@ -26,7 +30,7 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 300,
-    pictureUrl: './img/matudae.png',
+    pictureUrl: image,
   },
   {
     id: 4,
@@ -34,10 +38,11 @@ const items = [
     description:
       'El nombre Mammillaria proviene de la palabra latina mamma, que se refiere a los tubérculos que cubren el cuerpo de la planta y que, para varias especies, contiene una savia lechosa o látex.',
     price: 300,
-    pictureUrl: './img/matudae.png',
+    pictureUrl: image,
   },
 ];
 
+console.log(items);
 const itemListproduct = new Promise((resolve) => {
   setTimeout(() => {
     if (true) {
